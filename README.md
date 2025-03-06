@@ -24,7 +24,7 @@ A fully **responsive photo gallery** that adapts to different screen sizes! 📱
 
 ## 💡 Preview  
  
-https://github.com/user-attachments/assets/67ca31b8-4352-46b6-bb29-491bdf74ac6c
+https://github.com/user-attachments/assets/d8dc5135-7c3b-4515-aa12-b94748cd2152
 
 
 
