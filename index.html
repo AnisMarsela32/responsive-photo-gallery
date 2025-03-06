@@ -1,0 +1,121 @@
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   Cute & Colorful Photo Gallery
+  </title>
+  <script src="https://cdn.tailwindcss.com">
+  </script>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Roboto:wght@400;700&display=swap" rel="stylesheet"/>
+  <style>
+   body {
+            font-family: 'Roboto', sans-serif;
+        }
+        h1 {
+            font-family: 'Pacifico', cursive;
+        }
+        .lightbox {
+            display: none;
+            position: fixed;
+            z-index: 1000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgba(0, 0, 0, 0.9);
+        }
+        .lightbox-content {
+            position: relative;
+            margin: auto;
+            padding: 10px;
+            width: 80%;
+            max-width: 700px;
+        }
+        .lightbox img {
+            width: 100%;
+        }
+        .close {
+            position: absolute;
+            top: 10px;
+            right: 25px;
+            color: #fff;
+            font-size: 35px;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+        .close:hover,
+        .close:focus {
+            color: #bbb;
+            text-decoration: none;
+            cursor: pointer;
+        }
+  </style>
+ </head>
+ <body class="bg-pink-100">
+  <div class="container mx-auto py-8">
+   <h1 class="text-4xl text-center text-pink-600 mb-8">
+    Cute & Colorful Photo Gallery
+   </h1>
+   <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+    <div class="relative col-span-2 row-span-2">
+     <img alt="A beautiful landscape with mountains and a lake" class="w-full h-full object-cover cursor-pointer rounded-lg shadow-lg border-4 border-pink-300" height="400" onclick="openLightbox(this)" src="https://storage.googleapis.com/a1aa/image/2xGVG9tJn8E019AwgC1Fs9baCovo-VAUNRbmoIho2rw.jpg" width="600"/>
+    </div>
+    <div class="relative">
+     <img alt="A serene beach with golden sand and blue water" class="w-full h-full object-cover cursor-pointer rounded-lg shadow-lg border-4 border-pink-300" height="400" onclick="openLightbox(this)" src="https://storage.googleapis.com/a1aa/image/DABddVsd4gb7DCd-yvcBBaOOuACSKT7yPDm1jFhkXjo.jpg" width="600"/>
+    </div>
+    <div class="relative">
+     <img alt="A bustling cityscape with tall buildings and busy streets" class="w-full h-full object-cover cursor-pointer rounded-lg shadow-lg border-4 border-pink-300" height="400" onclick="openLightbox(this)" src="https://storage.googleapis.com/a1aa/image/oCiWGp9XxApdQUiRGp7t6vMPCadW57G4ZNhvkL17cHY.jpg" width="600"/>
+    </div>
+    <div class="relative col-span-2">
+     <img alt="A dense forest with tall trees and sunlight filtering through" class="w-full h-full object-cover cursor-pointer rounded-lg shadow-lg border-4 border-pink-300" height="400" onclick="openLightbox(this)" src="https://storage.googleapis.com/a1aa/image/HO6DLkMokRQMCk7Zqx7haWG-7Vq2m2nAlw44M3X5cc8.jpg" width="600"/>
+    </div>
+    <div class="relative">
+     <img alt="A snowy mountain peak under a clear blue sky" class="w-full h-full object-cover cursor-pointer rounded-lg shadow-lg border-4 border-pink-300" height="400" onclick="openLightbox(this)" src="https://storage.googleapis.com/a1aa/image/wm0IZfFdHGHTsc5qGkF--_n6z1QfoxNmkbwK7x3Hzvg.jpg" width="600"/>
+    </div>
+    <div class="relative">
+     <img alt="A close-up of colorful flowers in a garden" class="w-full h-full object-cover cursor-pointer rounded-lg shadow-lg border-4 border-pink-300" height="400" onclick="openLightbox(this)" src="https://storage.googleapis.com/a1aa/image/Rx6g73ccr0Yd8jy3lrlgcFb2yO-M7rTsduNwPgSSjt0.jpg" width="600"/>
+    </div>
+    <div class="relative col-span-2 row-span-2">
+     <img alt="A night sky filled with stars and a visible Milky Way" class="w-full h-full object-cover cursor-pointer rounded-lg shadow-lg border-4 border-pink-300" height="400" onclick="openLightbox(this)" src="https://storage.googleapis.com/a1aa/image/DbbJMw3GZDYsiRFaSpfGr87HrGWOo9JNVQwriAJumgw.jpg" width="600"/>
+    </div>
+    <div class="relative">
+     <img alt="A picturesque village with quaint houses and cobblestone streets" class="w-full h-full object-cover cursor-pointer rounded-lg shadow-lg border-4 border-pink-300" height="400" onclick="openLightbox(this)" src="https://storage.googleapis.com/a1aa/image/im2EhmbcwtB4Rxr04ZcSWXNL_ZV1hjOc_jEWZquSM6U.jpg" width="600"/>
+    </div>
+    <div class="relative">
+     <img alt="A vibrant sunset over a calm ocean" class="w-full h-full object-cover cursor-pointer rounded-lg shadow-lg border-4 border-pink-300" height="400" onclick="openLightbox(this)" src="https://storage.googleapis.com/a1aa/image/yfpg3BovhHgx7yPWBvp77xqkGQFXbNJV6sPEr4wHfz4.jpg" width="600"/>
+    </div>
+    <div class="relative col-span-2">
+     <img alt="A desert landscape with rolling sand dunes" class="w-full h-full object-cover cursor-pointer rounded-lg shadow-lg border-4 border-pink-300" height="400" onclick="openLightbox(this)" src="https://storage.googleapis.com/a1aa/image/ZrGwcbvobvpXxp-n_dSxu-xPZT7yYDZWcJVSQidMHDc.jpg" width="600"/>
+    </div>
+    <div class="relative">
+     <img alt="A waterfall cascading down a rocky cliff" class="w-full h-full object-cover cursor-pointer rounded-lg shadow-lg border-4 border-pink-300" height="400" onclick="openLightbox(this)" src="https://storage.googleapis.com/a1aa/image/aA1RpW7h_NCWBrPUL_wBaHxKk_zSKSv8yYmbMo8Qgt4.jpg" width="600"/>
+    </div>
+    <div class="relative">
+     <img alt="A close-up of a butterfly on a flower" class="w-full h-full object-cover cursor-pointer rounded-lg shadow-lg border-4 border-pink-300" height="400" onclick="openLightbox(this)" src="https://storage.googleapis.com/a1aa/image/-0cW9azD4cjF4_r4Sa41Je1l3hNChtr9J-KJaz7a59c.jpg" width="600"/>
+    </div>
+   </div>
+  </div>
+  <div class="lightbox" id="lightbox">
+   <span class="close" onclick="closeLightbox()">
+    ×
+   </span>
+   <div class="lightbox-content">
+    <img alt="" id="lightbox-img" src=""/>
+   </div>
+  </div>
+  <script>
+   function openLightbox(element) {
+            document.getElementById('lightbox').style.display = 'block';
+            document.getElementById('lightbox-img').src = element.src;
+            document.getElementById('lightbox-img').alt = element.alt;
+        }
+
+        function closeLightbox() {
+            document.getElementById('lightbox').style.display = 'none';
+        }
+  </script>
+ </body>
+</html>
